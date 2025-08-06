@@ -1,0 +1,187 @@
+/* ====== GENERAL ====== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color:#1B1B1E;
+    color:#9DD1F1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+}
+
+.resaltado{
+   color: #F3F9D2; 
+}
+/* ====== HEADER Y NAVEGACIÓN ====== */
+
+header{
+    background-image: linear-gradient(to right top, #1B1B1E, #294C60, #8882a6, #6a9ebf, #9DD1F1); /*fondo degradado*/
+    color: #1B1B1E;
+    text-align: center;
+    padding: 20px;
+}
+
+nav{
+    color: #9DD1F1;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.menu{ /*clase de la lista*/
+    list-style: none;         /* Saca los puntitos */
+    display: flex;            /* Hace que los <li> estén en fila */
+    justify-content: center;  /* Centra la fila en el nav */
+    gap: 1rem;               /* Espacio entre ítems (podés ajustarlo) */
+}
+
+.menu li::after {
+    content: "|";             
+    margin-left: 0.9rem;
+    margin-right: 0;
+}
+
+.menu li:last-child::after {
+    content: "";              /* Quita el | del último ítem */
+}
+
+.menu a {
+    color: #9DD1F1; /* o el color que quieras */
+}
+
+/* ====== SECCIÓN SOBRE MÍ ====== */
+
+#sobre-mi{
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 2rem;
+    border: 2px solid #9DD1F1;
+    border-radius: 50px;
+    box-shadow: 0 0px 10px black; /*sombra*/
+    transition: all 0.3s ease; /*transición del zoom. no va en el hover porque sino no funciona el ease-out*/
+}
+#sobre-mi:hover {
+    background-color: #0b0b0c;
+    transform: scale(1.02); /* zoom */
+    box-shadow: 0 0 15px #9DD1F1; /* cambio de color sombra */
+}
+
+#sobre-mi a{
+    color: #9DD1F1; /* color del link del nav */
+}
+
+/* ====== SECCIÓN RECORRIDO ACADÉMICO Y CERTIFICADOS GRAL ====== */
+
+.contenedor-article {
+    display: flex;
+    gap: 40px; /* opcional, espacio entre las sections */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+  flex: 1; /* para que cada sección tome espacio igual */
+  margin: 0;
+  padding: 0;
+}
+
+section h2{
+    border-left: 12px solid #F3F9D2;
+    border-radius: 20px;
+    padding-left: 10px;
+    color: #F3F9D2;
+}
+
+article li{
+    /*text-align: center;*/
+    list-style:circle;
+
+}
+div h3{
+    color:#F3F9D2;
+    text-align: center;
+}
+
+div h4{
+    text-align: center;
+}
+
+div p{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+/* ====== SECCIÓN RECORRIDO ACADÉMICO ====== */ 
+
+#recorrido-academico{
+    max-width: 2000px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 0;
+    background-color:#294C60;
+}
+
+/* ====== SECCIÓN CERTIFICADOS ====== */ 
+
+#certificados-relacionados{
+    max-width: 2000px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+#certificados-relacionados h2{
+    margin: auto;
+    width: fit-content;
+    border-left: 12px solid #9DD1F1;
+    color: #9DD1F1;
+}
+
+.certificado {
+  display: flex;/*convierte un contenedor en un "contenedor flexible". Esto permite alinear, distribuir y organizar los elementos hijos (los que están dentro) de forma sencilla, tanto en fila como en columna.*/
+  flex-direction: column; /* Uno abajo del otro */
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+}
+
+.certificado  h3{
+    color:#F3F9D2;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.certificado img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  transition: all 0.9s ease; /* velocidad del zoom */
+}
+
+.certificado img:hover {
+    transform: scale(1.60); /* zoom */
+}
+/* ====== FOOTER ====== */ 
+
+footer{
+    background-image: linear-gradient(to right top, #1B1B1E, #294C60, #8882a6, #6a9ebf, #9DD1F1);
+    color: #1B1B1E;
+    text-align: center;
+    padding: 20px;
+}
+
+footer img {
+  width: 40px;
+  height: auto;
+  margin:20px;
+  transition: all 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.70); /* zoom */
+}
